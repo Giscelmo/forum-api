@@ -46,4 +46,14 @@ public class Topico {
 
     @OneToMany(mappedBy = "topico", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Resposta> respostas;
+
+    public Topico(DadosCadastroTopico dados, Usuario autor, Curso curso) {
+        this.titulo = dados.titulo();
+        this.mensagem = dados.mensagem();
+        this.dataCriacao = LocalDateTime.now();
+        this.status = StatusTopico.ABERTO;
+        this.autor = autor;
+        this.curso = curso;
+    }
+
 }
