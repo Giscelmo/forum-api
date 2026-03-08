@@ -36,4 +36,10 @@ public class Usuario {
             inverseJoinColumns = @JoinColumn(name = "perfil_id")
     )
     private List<Perfil> perfis;
+
+    public Usuario(DadosCadastroUsuario dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.senha = dados.senha();
+    }
 }
