@@ -1,4 +1,11 @@
 package br.com.giscelmo.forum_api.domain.topico;
 
-public record DadosAtualizarTopico() {
+import jakarta.validation.constraints.NotBlank;
+
+public record DadosAtualizarTopico(
+        @NotBlank
+        String titulo,
+        @NotBlank
+        String mensagem
+) {
 }

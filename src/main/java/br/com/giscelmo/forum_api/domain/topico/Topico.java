@@ -56,4 +56,8 @@ public class Topico {
         this.curso = curso;
     }
 
+    public void atualizarInformacoes(DadosAtualizarTopico dados) {
+        this.titulo = dados.titulo();
+        this.mensagem = dados.mensagem();
+    }
 }
