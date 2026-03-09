@@ -37,7 +37,7 @@ public class TokenService {
                     .verify(token)
                     .getSubject();
         } catch (Exception e) {
-            return "";
+            return null;
         }
     }
 
